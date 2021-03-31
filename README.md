@@ -16,6 +16,19 @@
     6) Install dependencies 
     7) Set the Entrypoint to call the main part/start application
 
+    - ENV - set the environment variable 
+    - CMD -> Execte the command 
+    - ADD -> Add the files from remoteurl rather than the local machine and also unpack tar files
+    - VOLUME /var/data -> add volume to the container 
+    - STOPSIGNAL sigint -> system termination signal 
+    - HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost/ || exit 1 -> this posts log entry to local file system when it finds problem 
+    - ARG CODE_VERSION=latest -> Arg instruction pass variables during build time 
+    - ONBUILD ADD . /app/src -> used to biuld new image based on old existing local image
+    - ONBUILD RUN 
+    - SHELL ["powershell", "-command"] -> To use shells other than default ones
+
+    - https://docs.docker.com/engine/reference/builder/
+
 ## Docker commands
     ## Buid Image:
         - docker image build -t suryamangena/dockerlearning:first-container .
@@ -36,9 +49,14 @@
                 exit command -> it will kill the container as well
             - To have soft exit without killing container 
                 Ctrl+P+Q
+    
+        - By default container will run in bridge network
+            - docker network inspect bridge
+        - stop the container 
+          docker stop containername
+        - docker rmi containername1 containername2 -> multiple containers in single line
 
-
-
+    
           Reference: https://docs.docker.com/engine/reference/commandline/container_run/
 
 ## Virtual Machine vs Docker
@@ -59,6 +77,7 @@
     - docker service create --name web1 -p 8000:8080 --replicas 3 suryamangena/dockerlearning:first-container
     - docker container ls
     - docker service ps web1 -> Multinode docker swarm
+    - docker service rm web1
     
     ##Scale the docker containers:
         - docker service scale web1=10
