@@ -70,8 +70,7 @@
    - Group of either physical or virtual machines that are running the docker application and that have been configured to join together in a cluster. Clusters are controlled by swarm managers and machines that have joined the cluster are referred to as nodes.
 
 ## Docker Swarm Stack
-    ```diff
-     + Stack on a swarm don't support images on the file 
+    - Stack on a swarm don't support images on the file 
     - Images needs to be created 
           Reference: 
           - https://docs.docker.com/engine/reference/commandline/container_run/
