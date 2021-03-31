@@ -36,9 +36,6 @@
                 exit command -> it will kill the container as well
             - To have soft exit without killing container 
                 Ctrl+P+Q
-
-
-
           Reference: 
           - https://docs.docker.com/engine/reference/commandline/container_run/
         
