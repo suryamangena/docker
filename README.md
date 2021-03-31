@@ -81,7 +81,7 @@
     - docker stack ps counter -> Each container
     - docker stack rm conter
 
-## [Managing Container Images] (docs/managing-container-images.md)#Managing Container Images
+## [Managing Container Images] (docs/managing-container-images.md)
         
  ## References
  - https://github.com/nigelpoulton/gsd/tree/master/
