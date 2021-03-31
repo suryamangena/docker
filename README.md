@@ -43,7 +43,7 @@
         
  ## References
  - https://github.com/nigelpoulton/gsd/tree/master/
- - [docker image](images/docker.png)
+ - [docker image](images/docker-image.png)
 
 
 
