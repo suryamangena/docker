@@ -74,6 +74,14 @@
     - Images needs to be created 
           Reference: 
           - https://docs.docker.com/engine/reference/commandline/container_run/
+
+    - docker stack deploy -c docker-compose.yml conter
+    - docker stack ls 
+    -  docker stack services conter -> Each Services 
+    - docker stack ps counter -> Each container
+    - docker stack rm conter
+
+## [Managing Container Images] (docs/managing-container-images##Managing Container Images)
         
  ## References
  - https://github.com/nigelpoulton/gsd/tree/master/
