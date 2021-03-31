@@ -17,13 +17,13 @@
     7) Set the Entrypoint to call the main part/start application
 
 ## Docker commands
-    ### Buid Image:
+    ## Buid Image:
         - docker image build -t suryamangena/dockerlearning:first-container .
         - docker image ls
         - docker image rm suryamangena/dockerlearning:first-container 
 
           Reference: https://docs.docker.com/engine/reference/commandline/image/
-    ### Run Command:
+    ## Run Command:
         - docker container run -d --name web -p 8000:8080 suryamangena/dockerlearning:first-container -> Here d is detach i.e. mean run in background 
         - docker container ls
         - docker container stop web -> web is name of container 
@@ -73,6 +73,8 @@
     ```diff
      + Stack on a swarm don't support images on the file 
     - Images needs to be created 
+          Reference: 
+          - https://docs.docker.com/engine/reference/commandline/container_run/
         
  ## References
  - https://github.com/nigelpoulton/gsd/tree/master/
