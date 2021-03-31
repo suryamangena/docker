@@ -40,6 +40,39 @@
 
 
           Reference: https://docs.docker.com/engine/reference/commandline/container_run/
+
+## Virtual Machine vs Docker
+    - Virtual Machines virtualize the hardware
+    - Container virtualize the Operating System by sharing same OS Kernel and Hardware
+
+## Docker Compose
+    Used to define mlti-container apps
+    
+## Docker Compose Commands:
+
+    - docker-compose up -d 
+    - docker-compose down
+
+
+## Docker Service
+    - Docker service is only available in swarn mode
+    - docker service create --name web1 -p 8000:8080 --replicas 3 suryamangena/dockerlearning:first-container
+    - docker container ls
+    - docker service ps web1 -> Multinode docker swarm
+    
+    ##Scale the docker containers:
+        - docker service scale web1=10
+        - It will total scale to 10 including existing one. If we stop the few of the containers forcibly, then docker has observe state and desire state, in this case desire state 10 and observe state is 7 as we killed 3 docker containers. So docker service spin up 3 more containers to match the observe and desire state.
+    ## Remove the running docker container by using force option
+        - docker container rm 9c838b216de4 25c802319fd0 f594ac503234 -f
+
+## Docker Swarm
+   - Group of either physical or virtual machines that are running the docker application and that have been configured to join together in a cluster. Clusters are controlled by swarm managers and machines that have joined the cluster are referred to as nodes.
+
+## Docker Swarm Stack
+    ```diff
+     + Stack on a swarm don't support images on the file 
+    - Images needs to be created 
         
  ## References
  - https://github.com/nigelpoulton/gsd/tree/master/
